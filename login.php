@@ -1,8 +1,8 @@
 <?php
 session_start();
-include 'conexion.php'; // Incluye tu archivo de conexión a la base de datos
+include 'conexion.php'; 
 
-$message = ""; // Variable para almacenar mensajes
+$message = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
@@ -22,20 +22,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
+
         // Verificar la contraseña usando Argon2
-        if (password_verify($clave, $user['clave'])) {
+
+        // Comentar con Argos
+
+        // if (password_verify($clave, $user['clave'])) {
+
             // Almacenar información del usuario en la sesión
+
             $_SESSION['usuario'] = $user['usuario'];
             $_SESSION['rol'] = $user['rol'];
             header('Location: dashboard.php'); // Redirigir al dashboard
             exit();
         } else {
-            $message = "Contraseña incorrecta."; // Mensaje para contraseñas incorrectas
+            $message = "Contraseña incorrecta."; //  contraseñas incorrectas
         }
     } else {
-        $message = "Usuario no encontrado."; // Mensaje para usuarios no encontrados
+        $message = "Usuario no encontrado."; // usuarios no encontrados
     }
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -44,11 +50,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Concesionaria</title>
-    <link rel="stylesheet" href="css/dashboard.css"> <!-- Usa el mismo CSS del dashboard -->
+    <link rel="stylesheet" href="css/dashboard.css"> 
     <style>
         .login-container {
             max-width: 400px;
-            margin: 100px auto; /* Espacio superior para centrar el formulario */
+            margin: 100px auto; 
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -81,11 +87,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            width: 100%; /* Botón ocupa todo el ancho */
+            width: 100%; 
         }
 
         .submit-btn:hover {
-            background-color: #0056b3; /* Cambiar color al pasar el mouse */
+            background-color: #0056b3; 
         }
 
         .message {
@@ -99,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2 style="text-align:center;">Iniciar Sesión</h2>
         
         <?php if ($message): ?>
-            <div class="message"><?php echo htmlspecialchars($message); ?></div> <!-- Mostrar mensajes -->
+            <div class="message"><?php echo htmlspecialchars($message); ?></div> 
         <?php endif; ?>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

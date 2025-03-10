@@ -1,14 +1,16 @@
 <?php
 session_start();
-include 'conexion.php'; // Incluye tu archivo de conexión a la base de datos
+include 'conexion.php'; // 
 
-// Verifica si 'usuario' está definida en $_SESSION
+// 
+
 if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
     exit();
 }
 
 // Verificar si el usuario tiene el rol de administrador
+
 if ($_SESSION['rol'] !== 'admin') {
     header('Location: dashboard.php'); // Redirige a usuarios no administradores
     exit();
