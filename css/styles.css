@@ -1,0 +1,61 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Eliminar márgenes por defecto */
+    height: 100vh; /* Establecer la altura al 100% del viewport */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.login-container {
+    background-color: rgba(34, 34, 34, 0.9); /* Fondo oscuro con transparencia */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    width: 300px; /* Ancho fijo */
+}
+
+h2 {
+    text-align: center;
+    color: #007bff; /* Color azul para el título */
+}
+
+label {
+    display: block; /* Mostrar las etiquetas en bloque */
+    margin-bottom: 5px; /* Espacio entre etiqueta y campo */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Ancho del campo de entrada */
+    padding: 10px;
+    margin-bottom: 15px; /* Espacio entre campos */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #444; /* Fondo oscuro para los campos */
+    color: #fff; /* Color de texto blanco */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Color azul para el botón */
+    color: #fff;
+    padding: 10px;
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse sobre el botón */
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}

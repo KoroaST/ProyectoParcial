@@ -1,0 +1,16 @@
+/* Estilos adicionales específicos para autos-disponibles.php */
+.auto-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 300px; /* Ajusta el ancho según sea necesario */
+}
+.auto-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}

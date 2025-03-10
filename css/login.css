@@ -1,0 +1,60 @@
+/* login.css */
+
+body {
+    background-color: #000000b9; /* Color de fondo claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa del viewport */
+    margin: 0; /* Sin márgenes */
+}
+
+.login-container {
+    background-color: #00000073; /* Fondo blanco para el contenedor */
+    padding: 40px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 300px; /* Ancho fijo */
+}
+
+h2 {
+    text-align: center; /* Centrar el título */
+    color: #0b8f6e; /* Color azul */
+}
+
+.input-group {
+    margin-bottom: 15px; /* Espacio entre grupos de entrada */
+}
+
+label {
+    display: block; /* Mostrar etiquetas en bloque */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Ancho completo del campo */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+input[type="submit"] {
+    width: 100%; /* Ancho completo del botón */
+    padding: 10px; /* Espacio interno */
+    background-color: #0b8f6e; /* Color azul para el botón */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse sobre el botón */
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}
